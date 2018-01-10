@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+           <h1>Welcome to your account @ViewBag.User.Name!</h1> 
+           <h2>Here is your profile description:</h2>
+            <div>@ViewBag.User.description</div>
+    
+            <a href="allusers/@ViewBad.User.id">All Users</a>
+    <form action="Logout" method ="post">
+    <h3><button class="btn-primary">Log Out</button></h3>
+</form>
+</body>
+</html>

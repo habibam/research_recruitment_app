@@ -1,0 +1,65 @@
+@model loginregister.Models.Participant
+<!DOCTYPE html>
+
+@if(@ViewBag.Error !=null)
+{
+    @ViewBag.Error
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="well well-sm" id='parent_div_1'>
+@{
+    @if (@ViewBag.currentstudy != null){
+   <h1>@ViewBag.currentstudy.StudyName Study</h1> <h5><a href="/home">Home</a></h5>
+   <div style ="float:right">
+        <h5><a href="/logout">Logout</a></h5>
+    </div>
+   <h2>Add A Participant to this Study</h2>
+    <form asp-controller="Study" asp-action="categorizeparticipant" method="post" class="form-inline">
+        
+        <span asp-validation-for="SubjectId"></span>
+        <label asp-for="SubjectId"> Subject Id</label>
+        <input asp-for="SubjectId"/>
+        <br>
+        <label>Gender</label>
+        <select name="gender">
+
+
+                <option value="1">Female</option>
+                <option value="2">Male</option>
+        
+        </select>
+        <br>
+        <label>Status</label>
+        <select name="status">
+
+
+                    <option value="10">Treatment (CKD)</option>
+                    <option value="15">Control (Healthy)</option>
+            
+        </select>
+        <br>
+        <label>Age</label>
+        <select name="age">
+
+
+                <option value="18">>18</option>
+                <option value="21"><18</option>
+        
+        </select>
+        <input type="hidden" name=studyid value="@ViewBag.currentstudy.StudyId">
+    <br>
+        <button type="submit">Add Participant</button>
+    </form>
+}
+}
+</div>
+</body>
+</html>

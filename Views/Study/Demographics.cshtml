@@ -1,0 +1,167 @@
+ @{ 
+     
+    
+    <div style ="float:right">
+        <h5><a href="/home">Home</a></h5>
+    </div>
+    <div style ="float:right">
+            <h5><a href="/logout">Logout</a></h5>
+    </div>
+    @if(@ViewBag.studyname != null){
+        <h3>@ViewBag.studyname.StudyName Study</h3>
+    }
+    <h4>Target Demographics of Study Population</h4> 
+    <table class="table table-hover">
+            <thead class="blue-grey lighten-4">
+
+        <th> </th>
+        <th>Category A</th>
+        <th>Category B</th>
+        <th>Category C</th>
+        <th>Category D</th>
+        <th>Category E</th>
+        <th>Category F</th>
+        <th>Category G</th>
+        <th>Category H</th>
+    </thead>
+    <tr class>
+        <td>No. of Subjects</td>
+        <td>20</td>
+        <td>20</td>
+        <td>20</td>
+        <td>20</td>
+        <td>20</td>
+        <td>20</td>
+        <td>20</td>
+        <td>20</td>
+        
+
+    </tr>
+
+</table>
+<h4>Current Demographics of Study Populations</h4>
+<table class="table table-hover">
+        <th> </th>
+        <th>Category A</th>
+        <th>Category B</th>
+        <th>Category C</th>
+        <th>Category D</th>
+        <th>Category E</th>
+        <th>Category F</th>
+        <th>Category G</th>
+        <th>Category H</th>
+    <tr>
+            <td>No. of Subjects</td>
+            <td>@if(@ViewBag.CategoryA !=null) 
+            { 
+                @ViewBag.CategoryA.Count 
+            }
+            </td>
+        <td>@if(@ViewBag.CategoryB !=null) 
+            { 
+                @ViewBag.CategoryB.Count 
+            }
+        </td>
+        <td>@if(@ViewBag.CategoryC !=null) 
+            { 
+                @ViewBag.CategoryC.Count 
+            }
+        </td>
+        <td>@if(@ViewBag.CategoryD !=null) 
+            { 
+                @ViewBag.CategoryD.Count 
+            }
+        </td>
+        <td>@if(@ViewBag.CategoryE !=null) 
+            { 
+                @ViewBag.CategoryE.Count 
+            }
+        </td>
+        <td>@if(@ViewBag.CategoryF !=null) 
+            { 
+                @ViewBag.CategoryF.Count 
+            }
+        </td>
+        <td>@if(@ViewBag.CategoryG !=null) 
+            { 
+                @ViewBag.CategoryG.Count 
+            }
+        </td>
+        <td>@if(@ViewBag.CategoryH !=null) 
+            { 
+                @ViewBag.CategoryH.Count 
+            }
+        </td>
+    </tr>
+</table>
+<h4>Participants in this study</h4> 
+    <table>
+        <th>Subject Id</th>
+    @if(@ViewBag.participant != null) 
+    { 
+        @foreach ( var b in @ViewBag.participant)
+        {<tr>
+            <td>@b.SubjectId</td>
+        </tr>
+        }
+    
+    }
+</table>
+}
+
+<table class="table table-striped">
+        <th>Category</th>
+    <th>Gender</th>
+    <th>Subject Group</th>
+    <th>Age</th>
+<tr>
+    <td>A</td>
+    <td>Female</td>
+    <td>Treatment</td>
+    <td>>18</td>
+</tr>
+<tr>
+        <td>B</td>
+        <td>Female</td>
+        <td>Control</td>
+        <td>>18</td>
+</tr>
+<tr>
+        <td>C</td>
+        <td>Female</td>
+        <td>Treatment</td>
+        <td><18</td>
+</tr>
+<tr>
+        <td>D</td>
+        <td>Female</td>
+        <td>Control</td>
+        <td><18</td>
+</tr>
+<tr>
+        <td>E</td>
+        <td>Male</td>
+        <td>Treatment</td>
+        <td>>18</td>
+    </tr>
+    <tr>
+            <td>F</td>
+            <td>Male</td>
+            <td>Control</td>
+            <td>>18</td>
+    </tr>
+    <tr>
+            <td>G</td>
+            <td>Male</td>
+            <td>Treatment</td>
+            <td><18</td>
+    </tr>
+    <tr>
+            <td>H</td>
+            <td>Male</td>
+            <td>Control</td>
+            <td><18</td>
+    </tr>
+
+</tr>
+</table>

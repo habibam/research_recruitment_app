@@ -1,0 +1,37 @@
+@model loginregister.Models.User
+
+
+<div class="well well-sm" class ='child_div_1'>
+    <h1>Register</h1>
+    <form asp-controller="Home" asp-action="Register" method="post" class="form-inline">
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name">Name</label>
+        <br>
+        <input asp-for="Name" />
+        <br>
+        <span asp-validation-for="Email"></span>
+        <label asp-for="Email">Email</label>
+        <br>
+        <input asp-for="Email" />
+        <br>
+        <span asp-validation-for="Password"></span>
+        <label asp-for="Password">Password</label>
+        <br>
+        <input asp-for="Password" />
+        <br>
+        <span asp-validation-for="ConfirmPassword"></span>
+        <label asp-for="ConfirmPassword">Confirm Password</label>
+        <br>
+        <input asp-for="ConfirmPassword" />
+        <br>
+        <br>
+        <span asp-validation-for="ResearchRole"></span>
+        <label asp-for="ResearchRole">Research Role</label>
+        <br>
+    
+        <input asp-for="ResearchRole"/>
+        <br>
+   
+        <br><button type="submit" class="btn btn-success">Register</button>
+    </form>
+</div>

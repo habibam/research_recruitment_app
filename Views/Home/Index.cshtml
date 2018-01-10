@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Welcome to the Stud-E Recruitment Roster</h1>
+<p>The Stud-E Recruitment Roster is an application that allows the research team to manage and access subject recruitment demographics and goals.</p>
+<h3>@ViewBag.Success</h3>
+@Html.Partial("./Partials/RegisterForm")
+
+@ViewBag.loginerror
+@Html.Partial("./Partials/LoginForm")
+<br>
+
+
+
+

@@ -1,0 +1,38 @@
+<div>
+<h1>Current Studies</h1>
+<div style ="float:right">
+        <h5><a href="/logout">Logout</a></h5>
+    </div>
+</div>
+<div>
+    <h3>Welcome back @ViewBag.User.Name!</h3>
+    <h3>Role: @ViewBag.User.ResearchRole</h3>
+</div>
+
+
+<table class ="table table-striped">
+    <th>Study Name</th>
+    <th>Principle Investigator</th>
+    <th>Active Recruitment Period</th>
+    <th>Description</th>
+    <th>Actions</th>
+@{
+    @if(@ViewBag.allstudies != null){
+    @foreach(var x in @ViewBag.allstudies){
+    <tr>
+        <td><a href="demographics/@x.StudyId">@x.StudyName</a></td>
+        <td>@x.PrincipleInvestigator</td>
+        <td> 
+            @x.StartDate.ToString("MMM dd, yyyy")  - @x.EndDate.ToString("MMM dd, yyyy")</td>
+        <td>@x.Description</td>
+        <td><a href="participantform/@x.StudyId">Add Participant</a><br>
+            <a href="editstudyform/@x.StudyId">Edit Study Details</a><br>
+            <a href="delete/@x.StudyId">Delete Study</a></td>
+
+    </tr>
+    }
+    }
+}
+</table>
+
+<button><a href="StudyForm">Add New Study</a></button>

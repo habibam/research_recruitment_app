@@ -1,0 +1,12 @@
+@model loginregister.Models.LoginUser
+<h1>Login</h1>
+<div class="well well-sm" id='parent_div_1'>
+    <form asp-controller="Home" asp-action="Login" method="post" class="form-inline">
+        <span asp-validation-for="LogEmail"></span>
+        <label asp-for="LogEmail">Email</label><br>
+        <input asp-for="LogEmail"/><br>
+        <span asp-validation-for="LogPassword"></span>
+        <label asp-for="LogPassword">Password</label><br>
+        <input asp-for="LogPassword"/><br>
+        <br><button type="submit" class="btn btn-primary" >Login</button>
+    </form>

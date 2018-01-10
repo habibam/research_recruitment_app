@@ -1,0 +1,39 @@
+@model loginregister.Models.Study
+
+
+<div class="well well-sm" id='parent_div_1'>
+    <h2>Add New Study</h2> <h5><a href="home">Home</a></h5>
+    <div style ="float:right">
+            <h5><a href="/logout">Logout</a></h5>
+        </div>
+    <form asp-controller="Study" asp-action="createstudy" method="post" class="form-inline">
+            
+        
+        <span asp-validation-for="StudyName"></span>
+        <label asp-for="StudyName" class="control-label"> Study Name</label>
+        <br>
+        <input asp-for="StudyName" />
+        <br>
+        <span asp-validation-for="PrincipleInvestigator"></span>
+        <label asp-for="PrincipleInvestigator">Principle Investigator</label>
+        <br>
+        <input asp-for="PrincipleInvestigator" class="control-label"/>
+        <br>
+        <span asp-validation-for="StartDate"></span>
+        <label asp-for="StartDate"> Start Date</label>
+        <br>
+        <input asp-for="StartDate" class="control-label" />
+        <br>
+        <span asp-validation-for="EndDate"></span>
+        <label asp-for="EndDate">End Date</label>
+        <br>
+        <input asp-for="EndDate" class="control-label"/>
+        <br>
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description">Description</label>
+        <br>
+        <input asp-for="Description" class="control-label"/>
+        <br>
+        <button type="submit">Create Study</button>
+    </form>
+</div>
